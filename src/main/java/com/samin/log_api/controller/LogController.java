@@ -20,7 +20,7 @@ public class LogController {
     @Autowired
     LogRepository logRepository;
     @GetMapping("/logs")
-    public ResponseEntity<Page<Log>> getAllTutorials(@RequestParam Optional<Integer> page,
+    public ResponseEntity<Page<Log>> getAllLogs(@RequestParam Optional<Integer> page,
                                                      @RequestParam Optional<String> sortBy) {
         try {
             Page<Log> logs =  logRepository.findAll(
